@@ -1,0 +1,930 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+/* possibly create a dark theme if have enough time */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Ubuntu Mono',
+        monospace;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-flex-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 10%;
+    margin: 0;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+    width: 10%;
+    height: 100%;
+
+    font-size: 25px;
+
+    border-bottom: .5px solid black;
+}
+
+.home:hover {
+    color: darkcyan;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+    width: 10%;
+    height: 100%;
+
+    margin-left: 15px;
+
+    border-bottom: .5px solid black;
+}
+
+.resume-a-tag {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 25px;
+}
+
+.resume-a-tag:hover {
+    color: darkcyan;
+}
+
+.burger-name-flex-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 50%;
+    height: 100%;
+
+    margin-left: 10px;
+
+    border-bottom: 0.5px solid black;
+}
+
+.burger-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    font-size: 17px;
+
+    width: 35%;
+    height: 100%;
+
+    padding-right: 20px;
+}
+
+.burger-container {
+    display: none;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 95%;
+    width: 7%;
+
+    margin-right: 0px;
+}
+
+.burger-svg {
+    display: flex;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    content: url(icons8-menu.svg);
+
+    width: 50px;
+    height: 40px;
+
+    border: 0.50px solid black;
+    border-radius: 3px;
+}
+
+.burger-svg-close {
+    display: flex;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    content: url(icons8-close.svg);
+
+    width: 50px;
+    height: 40px;
+
+    border: 0.50px solid black;
+    border-radius: 3px;
+}
+
+.burger-bar-ol {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    background-color: transparent;
+
+    padding: 10px;
+}
+
+.resume-link-burger-bar {
+    color: black;
+    cursor: pointer;
+
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 27px;
+    padding: 5px;
+
+    width: 100%;
+
+    border-bottom: 0.5px solid black;
+}
+
+.bio-projects-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 80%;
+
+    margin-top: 40px;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 100%;
+
+    padding-right: 15px;
+}
+
+.profile-picture-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding-top: 10px;
+    margin-right: 5px;
+}
+
+.intro-h1 {
+    padding-right: 130px;
+}
+
+
+.profile-picture-social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: 5px;
+}
+
+.social-nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin-right: 15px;
+
+    border-radius: 4px;
+}
+
+#linked-in {
+    content: url(icons8-linkedin-circled.svg);
+    cursor: pointer;
+
+    width: 65%;
+}
+
+#github {
+    content: url(icons8-github.svg);
+    cursor: pointer;
+
+    width: 65%;
+}
+
+#instagram {
+    content: url(icons8-instagram.svg);
+    cursor: pointer;
+
+    width: 65%;
+}
+
+#linked-in:hover {
+    opacity: .5;
+}
+
+#github:hover {
+    opacity: .5;
+}
+
+#instagram:hover {
+    opacity: .5;
+}
+
+.profile-picture-img {
+    display: flex;
+    content: url(profile-pic.jpg);
+
+    width: 80%;
+    height: 100%;
+
+    margin-right: 10px;
+    margin-left: 10px;
+
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.bio-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 100%;
+}
+
+.about-me-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.bio-description-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 65%;
+
+    margin-top: 5px;
+    padding-top: 5px;
+    margin-left: 10px;
+
+    border-top: .5px solid black;
+}
+
+.about-me-bio-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    width: auto;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 100%;
+
+    border-left: .5px solid black;
+}
+
+.project-rows-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: underline;
+
+    width: 100%;
+    height: 7.5%;
+}
+
+.project-rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 30%;
+
+    margin: 1px;
+}
+
+.project-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 45%;
+    height: 100%;
+
+    font-size: 12px;
+}
+
+#minishell-project {
+    content: url(minishell-png.jpg);
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 75%;
+    height: 85%;
+}
+
+#minishell-project:hover {
+    transform: scale(1.15);
+    transition: all 0.25s ease;
+}
+
+#rps-project {
+    content: url(rps.jpg);
+
+    padding-top: 12px;
+    padding-bottom: 10px;
+    width: 48%;
+    height: 85%;
+}
+
+#rps-project:hover {
+    transform: scale(1.15);
+    transition: all 0.25s ease;
+}
+
+#wolf3d-project {
+    content: url(wolf3d.jpg);
+
+    padding-top: 9px;
+    padding-bottom: 9px;
+    width: 49%;
+    height: 85%;
+}
+
+#wolf3d-project:hover {
+    transform: scale(1.15);
+    transition: all 0.25s ease;
+
+}
+
+.project-description-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+
+    width: 55%;
+    height: 100%;
+
+    border-bottom: .5px solid black;
+}
+
+#wolf3d-no-underline-brorder {
+    border: none;
+}
+
+.project-description-header-text {
+    padding-top: 15px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+.project-description-body-text {
+    padding-left: 5px;
+
+    font-size: 17px;
+}
+
+.resume-contact-row-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 90%;
+
+    margin-top: 20px;
+}
+
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.resume-img {
+    content: url(brandon-resume.jpg);
+
+    width: 35%;
+    height: 100%;
+
+    margin-bottom: 5px;
+
+    border-radius: 4px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+
+/* probably leave out */
+
+/* .resume-img:hover {
+    transform: scale(1.20);
+    transition: all 0.5s ease;
+
+    box-shadow: none;
+    margin-top: 5px;
+    margin-bottom: 120px;
+} */
+
+
+
+.contact-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+    height: 100%;
+}
+
+.contact-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    width: 35%;
+    height: 10%;
+
+    margin-bottom: 10px;
+
+    color: black;
+
+    border: none;
+    border-radius: 4px;
+
+    box-shadow: 1px 1px 1px 1px;
+
+    background-color: transparent;
+}
+
+.contact-button:hover {
+    background-color: grey;
+}
+
+.close-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    width: 80%;
+    height: 10%;
+
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px;
+
+    background-color: transparent;
+}
+
+.close-button:hover {
+    background-color: grey;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    height: 100%;
+
+    background-color: transparent;
+
+    padding: 25px;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+}
+
+#contact-form label {
+    line-height: 40px;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+#contact-form textarea {
+    font-size: 20px;
+
+    width: 100%;
+    height: 100%;
+}
+
+.input-field {
+    font-size: 20px;
+    max-width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    background-color: transparent;
+    border: 1px solid #2d3436;
+    border-radius: 4px;
+
+
+}
+
+#submit-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+
+    width: 100%;
+    height: 20%;
+
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-color: transparent;
+    border: .5px solid black;
+    box-shadow: 1px 1px 1px 1px;
+    border-radius: 4px;
+}
+
+#submit-btn:hover {
+    background-color: grey;
+}
+
+@media screen and (max-width: 750px) {
+
+    html {
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .main-flex-container {
+        flex-direction: column;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .burger-name-flex-container {
+        margin: 0;
+        padding-left: 10px;
+        border: none;
+    }
+
+    .home {
+        display: none;
+    }
+
+    .link {
+        display: none;
+    }
+
+    .burger-name {
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        font-size: 15px;
+
+        width: 100%;
+
+        border-bottom: 0.5px solid black;
+    }
+
+    .burger-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        padding-top: 15px;
+
+        height: 100%;
+        width: 25%;
+
+        border-left: .5px solid black;
+    }
+
+    .intro-h1 {
+        padding-right: 0px;
+    }
+
+    .bio-container {
+        height: 100vh;
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    .bio-description-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        width: 100%;
+        height: 80%;
+
+        margin: 0;
+        padding-left: 10px;
+
+        border-top: .5px solid black;
+    }
+
+    .bio-projects-row-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        width: 100%;
+        height: 80%;
+
+        margin-top: 15px;
+    }
+
+    .about-me-bio-text {
+        font-size: 20px;
+
+        width: 100%;
+
+        border-bottom: 0.5px solid black;
+    }
+
+    .profile-picture-container {
+        width: 100%;
+        height: auto;
+
+        padding-left: 2px;
+        padding-top: 0px;
+        margin-right: 0px;
+    }
+
+    .profile-picture-img {
+        margin-left: 0;
+        margin-right: 0;
+        width: 89%;
+    }
+
+    .social-nav-links {
+        margin-right: 0px;
+    }
+
+    #linked-in {
+        width: 100%;
+    }
+
+    #github {
+        width: 100%;
+    }
+
+    #instagram {
+        width: 100%;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        width: 100%;
+        height: 100vh;
+
+        margin: 0px;
+    }
+
+    .project-rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        width: 100%;
+
+        margin: 1px;
+    }
+
+    .project-image-container {
+
+        width: 55%;
+        height: 100%;
+        font-size: 10px;
+    }
+
+    #minishell-project {
+        width: 90%;
+        height: 85%;
+    }
+
+    #rps-project {
+        width: 85%;
+        height: 75%;
+    }
+
+    #wolf3d-project {
+        width: 90%;
+        height: 80%;
+    }
+
+    .project-description-container {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: flex-start;
+
+        width: 45%;
+        height: 100%;
+    }
+
+    .project-description-header-text {
+        text-decoration: underline;
+        font-size: 17px;
+
+        padding-top: 15px;
+        padding-left: 5px;
+        margin-bottom: 5px;
+    }
+
+    .project-description-body-text {
+        padding-left: 5px;
+
+        font-size: 14px;
+    }
+
+    .resume-contact-row-container {
+        flex-direction: column;
+        width: 100%;
+        height: 91vh;
+
+
+        margin-top: 2px;
+    }
+
+    .resume-img {
+        content: url(brandon-resume.jpg);
+
+        width: 100%;
+        height: 100%;
+
+        margin-top: 10px;
+
+        border: 1px solid green;
+    }
+
+    .contact-button {
+        font-size: 15px;
+
+        width: 70%;
+        height: 7%;
+        margin-top: 10px;
+
+        margin-bottom: 5px;
+    }
+
+    .contact-container {
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .close-button {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #contact-form {
+        width: 100%;
+        height: 85%;
+
+        padding: 10px;
+
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+
+    #contact-form label {
+        line-height: 25px;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+
+    #contact-form textarea {
+        font-size: 20px;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .input-field {
+        font-size: 20px;
+        height: 6%;
+    }
+}
